@@ -1,4 +1,8 @@
-# NutriCrispy
+# IDGS-91
+
+Proyectos de DESARROLLO WEB INTEGRAL 2026.
+
+## NutriCrispy
 
 Sistema web estatico para registrar pacientes, calcular IMC y guardar consultas nutricionales en `sessionStorage`.
 
