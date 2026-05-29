@@ -1,0 +1,6 @@
+services:
+  - type: web
+    name: nutricrispy
+    runtime: static
+    staticPublishPath: .
+    buildCommand: echo "Sitio estatico sin compilacion"

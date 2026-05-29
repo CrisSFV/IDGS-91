@@ -9,7 +9,7 @@ Sistema web estatico para registrar pacientes, calcular IMC y guardar consultas 
 ## Entrega
 
 - Repositorio publico: https://github.com/CrisSFV/IDGS-91
-- URL de produccion: pendiente de despliegue en Vercel, Netlify o Render
+- URL de produccion: pegar aqui la URL activa de Render cuando termine el despliegue
 
 ## Estructura
 
@@ -20,10 +20,10 @@ Sistema web estatico para registrar pacientes, calcular IMC y guardar consultas 
 
 ## Despliegue
 
-La aplicacion no requiere build ni dependencias. Para publicar en Netlify o Vercel, configurar:
+La aplicacion no requiere build ni dependencias. Para publicar en Render, usar el archivo [render.yaml](render.yaml) incluido en el repositorio.
 
-- Framework preset: `Other` o `Static`
-- Build command: vacio
+- Tipo de servicio: `Static Site` o `Web` con runtime `static`
 - Publish directory: `.`
+- Build command: `echo "Sitio estatico sin compilacion"`
 
 Las rutas de CSS y JavaScript usan referencias relativas (`./css/...` y `./js/...`) para funcionar correctamente en produccion.

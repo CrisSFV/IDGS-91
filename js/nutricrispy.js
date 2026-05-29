@@ -312,3 +312,28 @@ function escaparHTML(str) {
 function guardarEnStorage() {
   sessionStorage.setItem('nutricrispy-data', JSON.stringify({ pacientes, historial }));
 }
+
+function limpiarTodosDatos() {
+  if (!confirm('⚠ ¿Eliminar TODOS los pacientes y consultas? Esta acción no se puede deshacer.')) return;
+  
+  pacientes = [];
+  historial = {};
+  pacienteSeleccionado = null;
+  
+  sessionStorage.removeItem('nutricrispy-data');
+  
+  renderListaPacientes();
+  renderHistorial(null);
+  mostrarVista('bienvenida');
+  
+  // Flash de confirmación
+  const flash = document.getElementById('flash-consulta');
+  if (flash) {
+    flash.style.display = 'block';
+    flash.innerHTML = `<div style="background:#FCEBEB;color:#A32D2D;padding:10px 14px;border-radius:8px;font-size:13px;margin-top:0.5rem;display:flex;align-items:center;gap:6px;">
+      <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>
+      Todos los datos han sido eliminados.
+    </div>`;
+    setTimeout(() => { flash.style.display = 'none'; }, 4000);
+  }
+}
