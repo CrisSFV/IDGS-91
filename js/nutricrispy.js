@@ -314,7 +314,7 @@ function guardarEnStorage() {
 }
 
 function limpiarTodosDatos() {
-  if (!confirm('⚠ ¿Eliminar TODOS los pacientes y consultas? Esta acción no se puede deshacer.')) return;
+  if (!confirm('¿Eliminar TODOS los pacientes y consultas? Esta acción no se puede deshacer.')) return;
   
   pacientes = [];
   historial = {};
