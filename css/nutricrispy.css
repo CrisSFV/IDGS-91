@@ -159,7 +159,7 @@ body {
   margin-top: 0.5rem;
   display: flex; align-items: center; justify-content: center; gap: 8px;
 }
-.btn-primario:hover { background: #0F6E56; }
+.btn-primario:hover { background: #0f3e6e; }
 .btn-primario:active { transform: scale(0.98); }
 
 .btn-secundario {
